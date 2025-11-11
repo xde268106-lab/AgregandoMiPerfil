@@ -812,3 +812,14 @@ code {
     font-size: var(--text-xs);
   }
 }
+
+.contributor-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    justify-content: center;
+  }
+
+.contributor-social-links + .contributor-social-links {
+    margin-top: var(--spacing-lg);
+  }

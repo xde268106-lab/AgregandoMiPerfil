@@ -17,6 +17,7 @@ const contributors = [
     nickname: "Dav082004",
     github: "https://github.com/Dav082004",
     linkedin: "https://www.linkedin.com/in/davidcontreraspalacios", // Opcional
+    instagram: "https://www.instagram.com/davidc_8n/", // Opcional
     image: "https://github.com/Dav082004.png", // Opcional - URL de imagen o usar avatar de GitHub
     description:
       "Apasionado por la tecnología y la enseñanza. Me encanta crear proyectos que ayuden a otros a aprender.",

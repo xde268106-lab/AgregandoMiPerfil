@@ -4,7 +4,7 @@ Una página web colaborativa donde desarrolladores de todo el mundo pueden contr
 
 ## 🌐 Ver la Página Web
 
-👉 **[Visita la página web aquí](https://dav082004.github.io/RepoColaborativo)**
+👉 **[Visita la página web aquí](https://dav082004.github.io/XperienceCampusWorkshop/)**
 
 ## 🎯 ¿Cómo Contribuir y Qué Practicarás?
 

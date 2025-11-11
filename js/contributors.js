@@ -92,6 +92,12 @@ function renderContributors() {
                </a>`
       : "";
 
+    const socialLinksHTML = `
+      ${githubHTML}
+      ${linkedinHTML}
+      ${contributor.instagram ? `<a href="${contributor.instagram}" target="_blank" class="contributor-social-link instagram" style="margin-top:6px"><i class="fab fa-instagram" style="color: #E1306C;"></i> Instagram</a>` : ""}
+    `;
+
     card.innerHTML = `
             ${avatarHTML}
             <div class="contributor-name">${contributor.name}</div>
@@ -104,8 +110,7 @@ function renderContributors() {
                 ${hobbiesHTML}
             </div>
             <div class="contributor-social-links">
-                ${githubHTML}
-                ${linkedinHTML}
+                ${socialLinksHTML}
             </div>
         `;
 

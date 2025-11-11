@@ -380,6 +380,7 @@
   transition: var(--transition);
   border: 1px solid var(--github-border);
   background: var(--white);
+  
 }
 
 .contributor-social-link.github {
