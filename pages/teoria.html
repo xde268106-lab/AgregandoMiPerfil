@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teoría - Git y GitHub para Principiantes</title>
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/teoria.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/teoria.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet" />
@@ -17,31 +17,12 @@
     <!-- Header -->
     <header class="header">
       <div class="header-container">
-        <div class="header-logos">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="header-logo-link">
-            <img
-              src="assets/Github.png"
-              alt="GitHub"
-              class="header-logo-img" />
-          </a>
-          <span class="logo-separator">×</span>
-          <a href="https://www.linkedin.com/company/dsc-utp/" target="_blank" rel="noopener noreferrer" class="header-logo-link">
-            <img
-              src="assets/Logo_DSCUTP.png"
-              alt="Developer Student Clubs UTP"
-              class="header-logo-img" />
-          </a>
-          <span class="logo-separator">×</span>
-          <a href="https://www.linkedin.com/company/xperience-campus/" target="_blank" rel="noopener noreferrer" class="header-logo-link">
-            <img
-              src="assets/Logo_XperienceCampus.jpg"
-              alt="Xperience Campus"
-              class="header-logo-img" />
-          </a>
+        <div class="header-title">
+          <h1>Git&GitHubWorkshop</h1>
         </div>
         <nav class="header-nav" id="headerNav">
-          <a href="index.html" class="nav-link">Inicio</a>
-          <a href="index.html#participantes" class="nav-link">Colaboradores</a>
+          <a href="../index.html" class="nav-link">Inicio</a>
+          <a href="../index.html#participantes" class="nav-link">Colaboradores</a>
           <a href="teoria.html" class="nav-link active">Teoría</a>
           <a href="como-contribuir.html" class="nav-link">Cómo Contribuir</a>
         </nav>
@@ -57,35 +38,8 @@
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <!-- Main Content -->
-    <main class="main-content">
-      <!-- Hero Section -->
-      <section class="theory-hero">
-        <div class="theory-hero-container">
-          <div class="hero-content">
-            <h1 class="hero-title">
-              Aprende <span class="gradient-text">Git & GitHub</span>
-            </h1>
-            <p class="hero-subtitle">
-              Todo lo que necesitas saber sobre control de versiones y colaboración
-            </p>
-            <div class="hero-navigation">
-              <a href="#git-basics" class="hero-nav-link">
-                <i class="fas fa-code-branch"></i>
-                Git Básico
-              </a>
-              <a href="#github-ecosystem" class="hero-nav-link">
-                <i class="fab fa-github"></i>
-                GitHub Ecosystem
-              </a>
-              <a href="#workflows" class="hero-nav-link">
-                <i class="fas fa-project-diagram"></i>
-                Workflows
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
+    <main>
+      
       <!-- Sección Git Básico -->
       <section id="git-basics" class="theory-section">
         <div class="theory-container">
@@ -105,25 +59,30 @@
             <div class="concept-card animated">
               <div class="concept-header">
                 <i class="fas fa-lightbulb concept-icon"></i>
-                <h3>¿Por qué usar Git?</h3>
+                <h3>Git es como... 📸</h3>
               </div>
               <div class="concept-content">
+                <div class="analogy-box">
+                  <p class="analogy-text">
+                    <strong>Imagina que Git es como una cámara súper inteligente</strong> que toma fotos de tu proyecto cada vez que haces cambios importantes.
+                  </p>
+                </div>
                 <div class="benefit-list">
                   <div class="benefit-item">
-                    <i class="fas fa-history"></i>
-                    <span>Historial completo de cambios</span>
+                    <i class="fas fa-camera"></i>
+                    <span><strong>Historial:</strong> Como un álbum de fotos de tu código</span>
                   </div>
                   <div class="benefit-item">
                     <i class="fas fa-users"></i>
-                    <span>Colaboración en equipo</span>
+                    <span><strong>Colaboración:</strong> Varios fotógrafos trabajando juntos</span>
                   </div>
                   <div class="benefit-item">
                     <i class="fas fa-shield-alt"></i>
-                    <span>Respaldo automático</span>
+                    <span><strong>Respaldo:</strong> Las fotos nunca se pierden</span>
                   </div>
                   <div class="benefit-item">
                     <i class="fas fa-code-branch"></i>
-                    <span>Trabajo en paralelo</span>
+                    <span><strong>Ramas:</strong> Como tomar fotos en paralelo</span>
                   </div>
                 </div>
               </div>
@@ -133,31 +92,36 @@
             <div class="concept-card animated">
               <div class="concept-header">
                 <i class="fas fa-layer-group concept-icon"></i>
-                <h3>Estados de Git</h3>
+                <h3>Estados de Git: Como preparar una carta 📝</h3>
               </div>
               <div class="concept-content">
+                <div class="analogy-box">
+                  <p class="analogy-text">
+                    <strong>Piensa en Git como escribir una carta importante:</strong>
+                  </p>
+                </div>
                 <div class="git-states">
                   <div class="state-item working">
                     <div class="state-circle">1</div>
                     <div class="state-info">
-                      <h4>Working Directory</h4>
-                      <p>Archivos que estás editando</p>
+                      <h4>📝 Escribiendo</h4>
+                      <p>Estás editando tu código, como escribir en un borrador</p>
                     </div>
                   </div>
                   <div class="state-arrow">↓</div>
                   <div class="state-item staging">
                     <div class="state-circle">2</div>
                     <div class="state-info">
-                      <h4>Staging Area</h4>
-                      <p>Cambios preparados (git add)</p>
+                      <h4>📋 Revisando</h4>
+                      <p>Seleccionas qué cambios incluir (git add), como elegir qué poner en la carta</p>
                     </div>
                   </div>
                   <div class="state-arrow">↓</div>
                   <div class="state-item committed">
                     <div class="state-circle">3</div>
                     <div class="state-info">
-                      <h4>Repository</h4>
-                      <p>Cambios guardados (git commit)</p>
+                      <h4>📮 Enviando</h4>
+                      <p>Guardas los cambios permanentemente (git commit), como enviar la carta</p>
                     </div>
                   </div>
                 </div>
@@ -365,7 +329,10 @@
               <div class="ecosystem-icon">
                 <i class="fas fa-folder-open"></i>
               </div>
-              <h3>Repository</h3>
+              <h3>Repository 📁</h3>
+              <div class="analogy-mini">
+                <strong>Como una carpeta mágica</strong> que recuerda todos los cambios que has hecho.
+              </div>
               <p>
                 Espacio donde se almacena tu proyecto con todo su historial de cambios. 
                 Puede ser público (visible para todos) o privado.
@@ -382,7 +349,10 @@
               <div class="ecosystem-icon">
                 <i class="fas fa-bug"></i>
               </div>
-              <h3>Issues</h3>
+              <h3>Issues 🎫</h3>
+              <div class="analogy-mini">
+                <strong>Como tickets en el cine</strong> pero para problemas y ideas de tu proyecto.
+              </div>
               <p>
                 Sistema para reportar bugs, solicitar características o discutir ideas. 
                 Como tickets de soporte para tu proyecto.
@@ -399,7 +369,10 @@
               <div class="ecosystem-icon">
                 <i class="fas fa-code-branch"></i>
               </div>
-              <h3>Pull Requests</h3>
+              <h3>Pull Requests 🤝</h3>
+              <div class="analogy-mini">
+                <strong>Como pedir permiso antes de entrar</strong> a la casa de alguien con tus cambios.
+              </div>
               <p>
                 Propuesta de cambios al código. Permite revisar, discutir y aprobar 
                 modificaciones antes de integrarlas.
@@ -733,12 +706,54 @@ console.log("¡Hello World!");
           <p class="resources-description">
             Ahora que conoces la teoría, ¡es hora de poner en práctica lo aprendido!
           </p>
+          <div class="resources-grid">
+            <div class="resource-category">
+              <h3><i class="fas fa-book"></i> Documentación Oficial</h3>
+              <div class="resource-links">
+                <a href="https://git-scm.com/doc" target="_blank" class="resource-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  Documentación de Git
+                </a>
+                <a href="https://docs.github.com" target="_blank" class="resource-link">
+                  <i class="fab fa-github"></i>
+                  GitHub Docs
+                </a>
+                <a href="https://docs.github.com/en/codespaces" target="_blank" class="resource-link">
+                  <i class="fas fa-cloud"></i>
+                  GitHub Codespaces
+                </a>
+                <a href="https://docs.github.com/en/copilot" target="_blank" class="resource-link">
+                  <i class="fas fa-robot"></i>
+                  GitHub Copilot
+                </a>
+              </div>
+            </div>
+            
+            <div class="resource-category">
+              <h3><i class="fas fa-graduation-cap"></i> Tutoriales Interactivos</h3>
+              <div class="resource-links">
+                <a href="https://learngitbranching.js.org/?locale=es_ES" target="_blank" class="resource-link">
+                  <i class="fas fa-code-branch"></i>
+                  Learn Git Branching
+                </a>
+                <a href="https://lab.github.com" target="_blank" class="resource-link">
+                  <i class="fas fa-flask"></i>
+                  GitHub Learning Lab
+                </a>
+                <a href="https://skills.github.com" target="_blank" class="resource-link">
+                  <i class="fas fa-star"></i>
+                  GitHub Skills
+                </a>
+              </div>
+            </div>
+          </div>
+          
           <div class="resources-actions">
             <a href="como-contribuir.html" class="resource-btn primary">
               <i class="fas fa-rocket"></i>
               Empezar a Contribuir
             </a>
-            <a href="index.html" class="resource-btn secondary">
+            <a href="../index.html" class="resource-btn secondary">
               <i class="fas fa-home"></i>
               Volver al Inicio
             </a>
@@ -759,6 +774,21 @@ console.log("¡Hello World!");
               <p class="footer-description">
                 Proyecto colaborativo para aprender Git, GitHub y desarrollo web
               </p>
+              <div class="footer-partners">
+                <div class="partner-logos">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="partner-link">
+                    <img src="../assets/Github.png" alt="GitHub" class="partner-logo" />
+                  </a>
+                  <span class="partner-separator">×</span>
+                  <a href="https://www.linkedin.com/company/dsc-utp/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                    <img src="../assets/Logo_DSCUTP.png" alt="Developer Student Clubs UTP" class="partner-logo" />
+                  </a>
+                  <span class="partner-separator">×</span>
+                  <a href="https://www.linkedin.com/company/xperience-campus/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                    <img src="../assets/Logo_XperienceCampus.jpg" alt="Xperience Campus" class="partner-logo" />
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="footer-right">
               <div class="footer-links">
@@ -777,7 +807,7 @@ console.log("¡Hello World!");
       </footer>
     </main>
 
-    <script src="js/teoria.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../js/teoria.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
