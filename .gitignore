@@ -44,11 +44,11 @@ yarn-error.log*
 .env.production.local
 
 # Auto-generated files (estos archivos se generan automáticamente, no commitear manualmente)
-# src/contributors-data.js  # Descomentado porque queremos commitear el generado por GH Actions
-# public/index.json          # Descomentado porque queremos commitear el generado por GH Actions
+# public/index.json se commitea porque es generado por GH Actions
 
 # Legacy files (no usar)
 legacy/
+src/
 
 # Test files
 *.test.js

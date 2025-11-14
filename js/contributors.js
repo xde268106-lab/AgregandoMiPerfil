@@ -2,8 +2,11 @@
 // 🔧 FUNCIONES PARA RENDERIZAR COLABORADORES
 // ============================================================================
 // Este archivo contiene toda la lógica para mostrar las tarjetas de colaboradores
-// Los datos están en src/contributors-data.js (auto-generado)
+// Los datos se cargan desde public/index.json
 // ============================================================================
+
+// Variable global para los colaboradores (se carga desde index.json)
+let contributors = [];
 
 // Función para obtener las iniciales del nombre
 function getInitials(name) {
@@ -249,6 +252,20 @@ function validateContributors() {
 
 // Inicialización cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", () => {
+  // Esperar a que se carguen los colaboradores
+  if (window.contributors) {
+    contributors = window.contributors;
+    initializeContributors();
+  } else {
+    window.addEventListener('contributorsLoaded', () => {
+      contributors = window.contributors;
+      initializeContributors();
+    });
+  }
+});
+
+// Función para inicializar colaboradores
+function initializeContributors() {
   // Validar datos
   validateContributors();
 
@@ -263,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Agregar animaciones de scroll
   setTimeout(addScrollAnimations, 500);
-});
+}
 
 // Exportar funciones para testing (si es necesario)
 if (typeof module !== "undefined" && module.exports) {

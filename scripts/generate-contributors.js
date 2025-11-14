@@ -167,43 +167,6 @@ function generateContributors() {
     `${colors.green}✅ Generado: public/index.json${colors.reset}`
   );
 
-  // Generar src/contributors-data.js
-  const srcDir = path.join(__dirname, "..", "src");
-  if (!fs.existsSync(srcDir)) {
-    fs.mkdirSync(srcDir, { recursive: true });
-  }
-
-  const contributorsJsPath = path.join(srcDir, "contributors-data.js");
-  const jsContent = `// ============================================================================
-// ⚠️  AUTO-GENERADO - NO EDITAR A MANO
-// ============================================================================
-//
-// Este archivo es generado automáticamente por:
-// scripts/generate-contributors.js
-//
-// Para agregar un nuevo colaborador:
-// 1. Crea un archivo JSON en: contributors/<tu-nickname>.json
-// 2. Usa templates/contributor-template.json como guía
-// 3. Haz commit y pull request
-// 4. GitHub Actions regenerará este archivo automáticamente
-//
-// Última generación: ${new Date().toISOString()}
-// Total de colaboradores: ${contributors.length}
-// ============================================================================
-
-const contributors = ${JSON.stringify(contributors, null, 2)};
-
-// ⚠️ NO MODIFIQUES NADA DE AQUÍ HACIA ABAJO ⚠️
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = { contributors };
-}
-`;
-
-  fs.writeFileSync(contributorsJsPath, jsContent, "utf-8");
-  console.log(
-    `${colors.green}✅ Generado: src/contributors-data.js${colors.reset}`
-  );
-
   // Resumen final
   console.log(
     `\n${colors.cyan}${"=".repeat(60)}${colors.reset}`
@@ -221,10 +184,9 @@ if (typeof module !== "undefined" && module.exports) {
     `${colors.red}❌ Archivos con errores: ${invalidCount}${colors.reset}`
   );
   console.log(
-    `${colors.blue}📁 Archivos generados:${colors.reset}`
+    `${colors.blue}📁 Archivo generado:${colors.reset}`
   );
   console.log(`   • public/index.json`);
-  console.log(`   • src/contributors-data.js`);
   console.log(
     `${colors.cyan}${"=".repeat(60)}${colors.reset}`
   );

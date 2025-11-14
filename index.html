@@ -145,8 +145,21 @@
       </footer>
     </main>
 
-    <!-- Auto-generated contributors data -->
-    <script src="src/contributors-data.js"></script>
+    <!-- Load contributors data from API -->
+    <script>
+      // Cargar colaboradores desde la API JSON
+      fetch('public/index.json')
+        .then(response => response.json())
+        .then(data => {
+          window.contributors = data;
+          // Disparar evento personalizado cuando los datos estén listos
+          window.dispatchEvent(new Event('contributorsLoaded'));
+        })
+        .catch(error => {
+          console.error('Error loading contributors:', error);
+          window.contributors = [];
+        });
+    </script>
     <script src="js/contributors.js"></script>
     <script src="js/script.js"></script>
   </body>
